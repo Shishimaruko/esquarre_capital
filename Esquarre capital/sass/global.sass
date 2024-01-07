@@ -1,0 +1,826 @@
+@import mixin.sass
+
+// Global setting –––––––––––––––––––––––––––––––––––
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto&display=swap')
+
+
+*
+  font-family: 'Montserrat', 'Roboto', sans-serif
+  box-sizing: border-box
+  position: relative
+
+a
+  font-family: 'Montserrat', 'Roboto', sans-serif
+  font-style: normal
+  font-weight: 400
+  text-decoration: none
+  cursor: pointer
+  +ani-time
+
+html,
+body
+  padding: 0
+  margin: 0
+
+body
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+  padding-top: 150px
+  .container
+    flex-grow: 1
+  
+// Layout ––––––––––––––––––––––––––––––––––––––––––––
+
+@import nav.sass
+@import footer.sass
+
+// Component –––––––––––––––––––––––––––––––––––––––––
+
+.bd
+  +bd
+
+.hero
+  width: 100vw
+  height: 407px
+  overflow: hidden
+  border-bottom: 7px solid $gold
+  h1
+    +mt(72px,113%,600)
+    color: #FFDF8B
+    position: absolute
+    left: 128px
+    top: 160px
+
+.crumb
+  +hv
+  margin-top: 24px
+  margin-left: 64px
+  a
+    color: $dark_3
+  a:last-child
+    color: $blue
+  a:not(:last-of-type)::after
+    content: '/'
+    margin-left: 4px
+    margin-right: 4px
+    color: $dark_3
+
+// Pagination
+.pagination
+  display: flex
+  margin: 0 auto
+  justify-content: center
+
+ul.page_group
+  display: flex
+  li
+    width: 32px
+    height: 32px
+    margin-right: 32px
+    a
+      display: block
+      height: 32px
+      text-align: center
+      +mt(20px,32px,400)
+      color: $gold
+    img
+      +center
+    .page_back
+      background-color: $gold
+      opacity: 0.5
+    .page_next
+      border: 1px solid rgba($dark_3, 0.5)
+    &:first-of-type,
+    &:nth-last-child(2),
+    &:last-of-type,
+      margin-right: 0
+
+ul.page_group.text
+  li
+    margin: 0
+  li:first-of-type::after
+    content: 'Previous'
+    +mt(20px,20px,400)
+    color: $gold
+    position: absolute
+    top: 4px
+    right: -95px
+  li:last-of-type::before
+    content: 'Next'
+    +mt(20px,20px,400)
+    color: $gold
+    position: absolute
+    top: 4px
+    right: 40px
+  li:nth-of-type(2)
+    width: initial
+    margin: 0 110px 0 145px
+    a
+      +mt(20px,20px,600)
+      color: $dark_3
+      line-height: 30px
+
+.button
+  +hv(20px,normal,400)
+  color: $gold
+  background-color: #fff
+  padding: 20px 24px
+  border-radius: 40px
+  border: 1px solid rgba(211, 232, 234, 0.50)
+  box-shadow: 0px 4px 4px 0px rgba(162, 200, 203, 0.10)
+
+// Each page –––––––––––––––––––––––––––––––––––––––––
+
+// ****** Index
+#index
+  .index_only
+    display: block
+  .hero
+    width: 100vw
+    height: 100vh
+    background-image: url(../img/index/hero.png)
+    background-size: cover
+    background-position: center center
+    background-repeat: no-repeat
+    top: -150px
+    z-index: 1
+    border-bottom: none
+    padding: 20px
+  .outline
+    width: 100%
+    height: 100%
+    border-radius: 20px
+    border: 1px solid $gold
+    z-index: 2
+    &::after
+      +card_corner
+      border-top: 50px solid transparent
+      border-left: 90px solid transparent
+      border-bottom: 50px solid $gold
+      border-right: 90px solid $gold
+      border-bottom-right-radius: 18px
+    img
+      position: absolute
+      right: 20px
+      bottom: 14px
+      z-index: 3
+  .headline
+    width: 100%
+    position: absolute
+    left: 0
+    bottom: 0
+    padding: 83px 10% 103px
+    background-color: rgba(00,00,00,0.7)
+    backdrop-filter: blur(10px)
+    h2
+      +mt(40px,120%,600)
+      color: white
+    h1
+      +mt(72px,113%,700)
+      color: #FFDF8B
+      text-align: left
+      position: relative
+      left: 0
+      top: 0
+  .section_1
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    max-width: 90%
+    margin: 0 auto 140px
+    img
+      max-width: 500px
+      width: 40%
+      margin-right: 40px
+    .info
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      flex: 1
+      +mt(42px,140%,400)
+      color: $dark_7
+      padding-top: 33px
+      img
+        display: none
+    .num
+      display: flex
+      +mt(20px,160%,600)
+      margin-top: 20px
+    .bigger
+      +mt(64px,160%,400)
+      color: $blue
+      margin-right: 72px
+  .section_2
+    text-align: center
+    width: 80%
+    margin: 0 auto 20px
+    +mt(32px,140%,400)
+    color: $dark_3
+    span
+      color: $blue
+    p
+      margin-bottom: 39px
+  .section_3
+    h3
+      +mt(35px,160%,300)
+      color: $blue
+      margin-left: 5%
+      margin-bottom: 88px
+      &::before
+        +top_line
+    .cards
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      padding: 0 10%
+      margin-bottom: 56px
+      &::after
+        content: ''
+        width: 100%
+        height: 90%
+        position: absolute
+        top: -60px
+        right: 0
+        z-index: -1
+        background-color: #F8F6F1
+    .card
+      width: 30%
+      max-width: 490px
+      margin-bottom: 64px
+    .intro
+      position: absolute
+      width: 70%
+      left: 10%
+      bottom: 10%
+      z-index: 3
+      h4
+        +mt(24px,normal,700)
+        color: white
+      p
+        +mt(17px,120%,500)
+        color: white
+    .center
+      text-align: center
+      margin-bottom: 72px
+  .section_4
+    h3
+      +mt(35px,160%,300)
+      color: $blue
+      margin-left: 5%
+      margin-bottom: 51px
+      &::before
+        +top_line
+    .cards
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      padding: 0 10% 51px
+      &::after
+        content: ''
+        width: 100%
+        height: 120%
+        position: absolute
+        top: -33px
+        right: 0
+        z-index: -1
+        background-color: #F8F6F1
+      .card
+        width: 30%
+        max-width: 540px
+        margin-bottom: 60px
+        border-radius: 5px
+        border: 1px solid #EBF1F3
+        background: #FFF
+        box-shadow: 0px 4px 10px 0px rgba(217, 217, 217, 0.30)
+      h4
+        +mt(17px,normal,600)
+        color: $dark_1
+        text-align: center
+        padding: 33px 10% 28px
+        border-bottom: 1px solid #EEE7E7
+      .text
+        +mt(17px,160%,400)
+        color: $dark_2
+        padding: 28px 10% 66px
+        &::after
+          content: ' (view)'
+          color: $blue
+      .label
+        display: flex
+        justify-content: space-between
+        padding: 0 10% 20px
+      .time
+        +mt(18px,normal,700)
+        color: $dark_1
+      .tag
+        +mt(14px,160%,400)
+        color: $gold
+        letter-spacing: 0.7px
+    .center
+      background-color: #F8F6F1
+      text-align: center
+      padding-top: 30px
+      padding-bottom: 80px
+
+// ****** About us
+
+
+// ****** Partner
+.partner_cards
+  display: flex
+  flex-wrap: wrap
+  margin: 60px auto
+  padding: 0 30px
+  max-width: 1640px
+  .card
+    width: 265px
+    height: 265px
+    padding: 28px
+    margin-right: 48px
+    margin-bottom: 60px
+    border: 1px solid #EBF1F3
+    box-shadow: 0px 4px 10px 0px rgba(217, 217, 217, 0.30)
+    img
+      +center
+
+// ****** Approach
+#approach
+  h2
+    +mt(42px,140%,700)
+    color: $gold
+    text-align: center
+    margin-top: 64px
+    margin-bottom: 32px
+  h3
+    +mt(24px,140%,400)
+    color: $dark_7
+    text-align: center
+    max-width: 50%
+    margin: 0 auto 46px
+  .photo
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    background-color: #F8F6F1
+    padding-top: 80px
+    div
+      margin: 0 56px
+      margin-bottom: 80px
+    p
+      +mt(30px,140%,500)
+      color: $dark_1
+      text-align: center
+      margin-top: 19px
+  .fund
+    margin-top: 77px
+    margin-bottom: 153px
+    h3
+      +mt(36px,140%,500)
+      color: $dark_1
+      margin-bottom: 10px
+    .feature
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      p
+        +mt(32px,140%,500)
+        color: $dark_3
+        margin-left: 12px
+        margin-right: 48px
+        &::before
+          content: ''
+          width: 2px
+          height: 20px
+          background-color: $gold
+          position: absolute
+          left: -12px
+          top: 8px
+          z-index: 1
+
+// ****** Insights
+#insights
+  .category_pills
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    margin-top: 61px
+    margin-bottom: 30px
+    a
+      +mt(17px,normal,400)
+      color: $dark_3
+      margin-right: 16px
+      padding: 10px 24px
+      border-radius: 100px
+      border: 1px solid rgba(214, 214, 214, 0.25)
+      background: #FFF
+      box-shadow: 0px 4px 4px 0px rgba(73, 171, 208, 0.05)
+      &.active_pill
+        border-color: $gold
+        color: $gold
+  .insight_cards
+    display: flex
+    flex-wrap: wrap
+    max-width: 1460px
+    margin: 0 auto 63px
+    .card
+      max-width: 420px
+      margin: 32px
+      border-radius: 5px
+      border: 1px solid #EBF1F3
+      background: #FFF
+      box-shadow: 0px 4px 10px 0px rgba(217, 217, 217, 0.30)
+      &::before
+        +card_arrow
+      &::after
+        +card_corner
+      h3
+        +mt(20px,normal,500)
+        color: $dark_1
+        text-align: center
+        padding: 32px 55px
+        border-bottom: 1px solid #EEE7E7
+      .info
+        padding: 29px 55px 22px 42px
+      .subtitle
+        +hv(17px,160%,400)
+        color: $dark_1
+        margin-top: 12px
+        margin-bottom: 12px
+      .text
+        +rb(17px,160%,400)
+        color: $dark_2
+        width: 100%
+        margin-bottom: 100px
+        &::after
+          content: ' (view)'
+          +rb(17px,160%,400)
+          color: $blue
+      .label
+        display: flex
+        position: absolute
+        left: 42px
+        bottom: 22px
+      .date
+        +mt(13px,normal,700)
+        color: $dark_1
+        margin-right: 18px
+      .tag
+        +hv(14px,160%,400)
+        color: $gold
+        top: -3px
+  .pagination
+    margin-bottom: 244px
+
+// ****** Article
+#article
+  .content
+    padding-top: 61px
+    padding-bottom: 102px
+    text-align: center
+  .label
+    display: flex
+    justify-content: center
+  .date
+    +mt(13px,normal,700)
+    color: $dark_1
+    margin-right: 18px
+  .tag
+    +hv(14px,160%,400)
+    color: $gold
+    top: -3px
+  .section_1
+    padding: 10%
+    h2
+      +mt(42px,140%,600)
+      color: $dark_1
+      margin: 43px 10%
+    p 
+      +mt(24px,140%,400)
+      color: $dark_7
+      margin: 0px 10% 43px
+    .pic_note
+      +rb(20px,140%,400)
+      color: $dark_3
+      margin-top: 16px
+  .section_2
+    margin-top: 84px
+    margin-bottom: 96px
+    padding: 0 20%
+    text-align: left
+    .time
+      display: flex
+      padding-bottom: 12px
+      margin-bottom: 54px
+      border-bottom: 1px solid #D6D6D6
+      p
+        +rb(20px,200%,400)
+        color: $dark_3
+        margin-left: 8px
+    .title
+      +mt(42px,140%,400)
+      color: $blue
+      margin-bottom: 21px
+    .text
+      +rb(17px,140%,400)
+      color: $dark_2
+      margin-bottom: 21px
+  .pagination
+    margin-bottom: 98px
+
+// ****** Contact us
+#contact_us
+  .content
+    margin: 64px 10% 242px
+  h2
+    +mt(42px,140%,500)
+    margin-bottom: 32px
+  .office_group
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin-bottom: 120px
+  .office
+    padding-left: 19px
+    max-width: 500px
+    margin-bottom: 60px
+    h4
+      +mt(24px,140%,500)
+      color: $dark_1
+      margin-bottom: 16px
+      &::before
+        content: ''
+        width: 2px
+        height: 24px
+        background-color: $gold
+        position: absolute
+        z-index: 1
+        left: -20px
+        top: 6px
+    p
+      +mt(24px,160%,400)
+      color: $dark_3
+  .social_cards
+    display: flex
+    .card
+      width: 552px
+      height: 290px
+      border-radius: 8px
+      border: 1px solid #EBF1F3
+      background: #F8F8F8
+      box-shadow: 0px 4px 10px 0px rgba(217, 217, 217, 0.30)
+      margin-right: 70px
+      padding: 41px 50px
+      &::before
+        +card_arrow
+      &::after
+        +card_corner
+    img
+      margin-bottom: 17px
+    h3
+      +mt(36px,140%,500)
+      color: $dark_7
+      padding-top: 31px
+      border-top: 1px solid #D4D4D4
+
+
+// mobile - iphone 15Pro Max ––––––––––––––––––––––––––––––––––––––––––
+
+@media (max-width: 430px)
+  .hero
+    height: 180px
+    h1
+      +mt(28px,120%,500)
+      +center
+      width: 90%
+      text-align: center
+  .crumb
+    margin-top: 18px
+    margin-left: 34px
+  // *** Index
+  #index
+    .hero
+      top: -80px
+      padding: 10px
+    .outline
+      &::after
+        border-left-width: 50px
+        border-right-width: 50px
+      img
+        width: 36px
+        height: 36px
+        right: 8px
+        bottom: 12px
+    .headline
+      padding: 29px 32px 60px
+      h2
+        font-size: 18px
+        margin-bottom: 5px
+      h1
+        font-size: 30px
+        transform: translate(0, 0)
+    .button
+      font-size: 17px
+    .section_1
+      max-width: 100vw
+      margin: 0px 32px 70px
+      & > img
+        display: none
+      .info
+        width: 100%
+        font-size: 24px
+        padding-top: 0px
+        img
+          display: block
+          width: 240px
+          height: auto
+          display: block
+          margin: 0 auto 36px
+      .num
+        margin: 35px 50px 25px
+        flex-wrap: wrap
+        font-size: 18px
+      .bigger
+        +mt(36px,160%,300)
+        margin-bottom: 10px
+      .center
+        text-align: center
+    .section_2
+      font-size: 24px
+      margin-bottom: 70px
+      p
+        margin-bottom: 32px
+      .button
+        display: block
+        margin-bottom: 70px
+    .section_3
+      h3
+        display: none
+      .cards
+        padding: 0 32px
+        margin-bottom: 32px
+        justify-content: space-between
+        &::after
+          content: ''
+          height: 85%
+          top: 5%
+      .card
+        width: 45%
+        max-width: 175px
+        margin: 0 4px 20px
+      .intro
+        width: 100%
+        height: 100%
+        left: 0
+        bottom: 0
+        h4
+          width: 90%
+          font-size: 18px
+          text-align: center
+          +center
+        p
+          display: none
+    .section_4
+      h3
+        margin-left: 20px
+        margin-bottom: 22px
+      .cards
+        padding: 0 16px
+        &::after
+          content: ''
+          height: 50%
+          top: 50%
+        .card
+          width: 100%
+          margin-bottom: 36px
+        h4
+          padding: 33px 25px 28px
+        .text
+          padding: 28px 25px 45px
+
+  // *** About us
+
+  // *** Partner
+  .partner_cards
+    .card
+      width: 47%
+      height: 160px
+      margin-bottom: 16px
+      margin-right: 16px
+      &:nth-of-type(2n)
+        margin-right: 0px
+  // *** Approach
+  #approach
+    h2
+      font-size: 24px
+      margin-top: 56px
+      margin-bottom: 10px
+    h3
+      max-width: 100%
+      padding: 30px
+      text-align: left
+    .photo
+      padding-top: 60px
+      div
+        margin: 0 12px
+        margin-bottom: 80px
+      img
+        max-width: 95%
+        height: auto
+      p
+        font-size: 24px
+    .fund
+      margin-top: 48px
+      margin-bottom: 98px
+      h3
+        font-size: 22px
+        margin-bottom: 20px
+        padding: 0
+        text-align: center
+      .feature
+        justify-content: start
+        p
+          font-size: 20px
+          margin-left: 42px
+          margin-bottom: 16px
+  // *** Insights
+  #insights
+    .category_pills
+      margin: 56px auto 36px
+      a
+        margin-bottom: 16px
+    .insight_cards
+      margin-bottom: 20px
+      .card
+        margin: 0 16px 32px
+    .pagination
+      margin-bottom: 126px
+  // *** Article
+  #article
+    .content
+      padding-top: 59px
+      padding-bottom: 27px
+    .date,
+    .tag
+      font-size: 17px
+    .section_1
+      padding: 0 16px
+      h2
+        font-size: 24px
+        margin: 24px 0
+      p 
+        font-size: 17px
+        margin: 0 0 24px
+      .pic_note
+        font-size: 14px
+    .section_2
+      margin-top: 84px
+      margin-bottom: 26px
+      padding: 0 16px
+      .title
+        font-size: 24px
+      .text
+        font-size: 18px
+    .pagination
+      margin-bottom: 42px
+      .page_group.text
+        width: calc(100% - 32px)
+        flex-wrap: wrap
+        justify-content: space-between
+        li:nth-of-type(2)
+          order: 3
+          width: 100vw
+          margin: 0
+          margin-top: 36px
+  // *** Contact us
+  #contact_us
+    .content
+      margin: 56px 16px 58px
+    h2
+      font-size: 24px
+      margin-bottom: 36px
+    .office_group
+      margin-bottom: 32px
+    .office
+      padding-left: 19px
+      margin-bottom: 24px
+      h4
+        font-size: 20px
+        margin-bottom: 8px
+      p
+        font-size: 17px
+    .social_cards
+      display: flex
+      flex-wrap: wrap
+      .card
+        height: 240px
+        margin-right: 0
+        margin-bottom: 24px
+      img
+        margin-bottom: 17px
+      h3
+        font-size: 24px
+
+

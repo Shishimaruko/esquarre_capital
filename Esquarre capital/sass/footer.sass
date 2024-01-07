@@ -1,0 +1,80 @@
+@import mixin.sass
+
+footer
+  background-color: $dark_1
+  .above_line
+    padding: 60px 80px 75px 106px
+    border-bottom: 1px solid $dark_6
+    display: flex
+    justify-content: space-between
+    .address
+      width: 336px
+      margin-top: 22px
+      margin-bottom: 18px
+      padding-top: 18px
+      padding-bottom: 27px
+      border-top: 1px solid $dark_6
+      border-bottom: 1px solid $dark_6
+      h5
+        +mt(17px,160%,400)
+        color: $dark_5
+        margin-bottom: 9px
+      p
+        +mt(17px,120%,300)
+        color: $dark_3
+        font-family: 'helvetica'
+        letter-spacing: 0.85px
+    .socials a
+      margin-right: 12px
+    .sitemap
+      display: flex
+      ul
+        margin-left: 36px
+      li:first-of-type
+        +mt(16px,normal,700)
+        color: $blue
+        margin-bottom: 12px
+      li
+        margin-bottom: 8px
+        a
+          +mt(16px,normal,400)
+          color: $dark_4
+        
+  .under_line
+    padding: 15px 80px 21px 106px
+    display: flex
+    justify-content: space-between
+    a
+      +mt(14px)
+      margin-right: 24px
+      color: $dark_4
+    p
+      +hv(13px,normal,400)
+      color: $dark_3
+
+// RWD ––––––––––––––––––––––––––––––––––––––––––
+
+@media (max-width: 1240px)
+  footer
+    // margin-bottom: 45px
+    .above_line
+      padding: 30px 34px 50px
+      .logo
+        display: none
+      .address
+        border: none
+        margin-top: 0
+        padding-top: 0
+        padding-bottom: 14px
+        margin-bottom: 0
+        h5
+          color: $gold
+    .sitemap
+      display: none !important
+    .under_line
+      display: block
+      padding: 24px
+      text-align: center
+      p
+        margin-top: 5px
+  

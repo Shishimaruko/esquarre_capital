@@ -1,0 +1,65 @@
+doctype html
+html(lang='en')
+  include header.pug
+  body
+    include nav.pug
+    //- container start –––––––––––––––––––––––––––––––––––
+
+    .container#insights
+      .hero
+        img(src='../img/insights/hero.png' width='auto' height='100%' alt='Hero')
+        h1 Insights
+      .crumb
+        a(href='#') Home
+        a(href='') insights
+      .content
+        .category_pills
+          a.active_pill(href='' id='') All
+          a(href='' id='') News
+          a(href='' id='') Press Release
+          a(href='' id='') Opinion
+        .insight_cards
+          a(href='article.html').card
+            h3 This Is The Home That Gives Housing A New Future
+            .info
+              img(src='../img/insights/sample_1.png' width='100%' height='auto' alt='')
+              p.subtitle THE GUARDIAN
+              p.text Deal for London business district will meet almost three-quarters of electricity demand from wind power pppp24r ...
+            .label
+              p.date June. 20. 2022
+              p.tag #News
+          a(href='article.html').card
+            h3 This Is The Home That Gives Housing A New Future
+            .info
+              //- img(src='../img/insights/sample_1.png' width='100%' height='auto' alt='')
+              p.subtitle THE GUARDIAN
+              p.text Deal for London business district will meet almost three-quarters of electricity demand from wind power ...
+            .label
+              p.date June. 20. 2022
+              p.tag #News
+          a(href='article.html').card
+            h3 This Is The Home That Gives Housing A New Future
+            .info
+              img(src='../img/insights/sample_1.png' width='100%' height='auto' alt='')
+              p.subtitle THE GUARDIAN
+              p.text Deal for London business district will meet almost three-quarters of electricity demand from wind power ...
+            .label
+              p.date June. 20. 2022
+              p.tag #News
+          a(href='article.html').card
+            h3 This Is The Home That Gives Housing A New Future
+            .info
+              img(src='../img/insights/sample_1.png' width='100%' height='auto' alt='')
+              p.subtitle THE GUARDIAN
+              p.text Deal for London business district will meet almost three-quarters of electricity demand from wind power ...
+            .label
+              p.date June. 20. 2022
+              p.tag #News
+
+      include pagination.pug
+      
+
+    //- container end ––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+    include footer.pug
+
+

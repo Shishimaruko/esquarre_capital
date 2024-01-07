@@ -1,0 +1,40 @@
+doctype html
+html(lang='en')
+  include header.pug
+  body
+    include nav.pug
+    //- container start –––––––––––––––––––––––––––––––––––
+
+    .container#article
+      .hero
+        img(src='../img/insights/hero.png' width='auto' height='100%' alt='Hero')
+        h1 Insights
+      .crumb
+        a(href='#') Home
+        a(href='') insights
+      .content
+        .label
+          p.date June. 20. 2022
+          p.tag #News
+        .section_1
+          h2 Artificial Intelligence of Things (AIoT) – Trends and Applications in 2024
+          p The accelerating convergence of artificial intelligence (AI) and Internet of Things (IoT) has sparked a recent wave of interest in Artificial Intelligence of Things (AIoT).
+          img(src='../img/article/Rectangle 36.png' width='100%' height='auto')
+          p.pic_note [ Photos: Pexels; Mourizal Zativa ]
+        .section_2
+          .time
+            img(src='../img/article/Time Circle.png' width='46px' height='46px')
+            p 5 minute read
+          p.title What Is AIoT
+          p.text AIoT stands for Artificial Intelligence of Things; it combines the connectivity from the Internet of Things (IoT) with the data-driven knowledge obtained from Artificial Intelligence (AI). This emerging technology is based on the integration of Artificial Intelligence in IoT infrastructure. By combining IoT with AI, the data collected by distributed nodes can be utilized by applying AI techniques such as machine learning and deep learning. As a result, machine learning capabilities are moved closer to the data source. This concept is called Edge AI, or Edge Intelligence, and it allows higher scalability, robustness, and efficiency. We at viso.ai specialize in the combination of Computer Vision and IoT, or visual AIoT. We power the end-to-end computer vision platform Viso Suite used by leading companies to power their AI vision applications. The platform provides software infrastructure with no-code and low-code to develop, deploy and operate large-scale AIoT applications faster.
+          p.title What Is AIoT
+          p.text AIoT stands for Artificial Intelligence of Things; it combines the connectivity from the Internet of Things (IoT) with the data-driven knowledge obtained from Artificial Intelligence (AI). This emerging technology is based on the integration of Artificial Intelligence in IoT infrastructure. By combining IoT with AI, the data collected by distributed nodes can be
+          img(src='../img/article/Rectangle 36.png' width='100%' height='auto')
+
+      include pagination_text.pug
+      
+
+    //- container end ––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+    include footer.pug
+
+

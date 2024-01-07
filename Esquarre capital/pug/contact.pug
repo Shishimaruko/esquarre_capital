@@ -1,0 +1,39 @@
+doctype html
+html(lang='en')
+  include header.pug
+  body
+    include nav.pug
+    //- container start –––––––––––––––––––––––––––––––––––
+
+    .container#contact_us
+      .hero
+        img(src='../img/contact/hero.png' width='auto' height='100%' alt='Hero')
+        h1 Contact Us
+      .crumb
+        a(href='#') Home
+        a(href='') Contact Us
+      .content
+        h2 Corporate  Office
+        .office_group
+          .office
+            h4 Taipei Office, Taiwan
+            p 33F., No. 7, Sec. 5, Xinyi Rd., Xinyi Dist., Taipei City 110615 , Taiwan (R.O.C.)
+          .office
+            h4 Tokyo Office, Japan
+            p 27th Floor, Shiroyama Trust Tower, 4-3-1 Toranomon, Mitato-ku, Tokyo, Japan
+          .office
+            h4 Munich Office, German
+            p Roseggerstrasse 22, 82229 Seefeld, Germany
+        .social_cards
+          .card
+            img(src='../img/contact/linkedin.png' width='55px' height='55px' alt='Hero')
+            h3 Esquarre capital
+          .card
+            img(src='../img/contact/email.png' width='55px' height='55px' alt='Hero')
+            h3 esq@esquarre.com
+      
+
+    //- container end ––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+    include footer.pug
+
+

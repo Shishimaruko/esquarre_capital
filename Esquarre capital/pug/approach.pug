@@ -1,0 +1,37 @@
+doctype html
+html(lang='en')
+  include header.pug
+  body
+    include nav.pug
+    link(rel="stylesheet" type="text/css" href="../css/approach.css")
+    //- container start –––––––––––––––––––––––––––––––––––
+
+    .container#approach
+      .hero
+        img(src='../img/approach/hero.png' width='auto' height='100%' alt='Hero')
+        h1 Approach Strategy
+      .crumb
+        a(href='#') Home
+        a(href='') Approach
+      .content
+        h2 A Co-Creation Platform
+        h3 We Drive investment value through collaboration with Growth & Transformation-seeking Enterprises in IoT Key Domains
+        .photo
+          div
+            img(src='../img/approach/1.png' width='535px' height='350px')
+            p Digital Transformation
+          div
+            img(src='../img/approach/2.png' width='535px' height='350px')
+            p Legacy Reinvented
+        .fund
+          h3 Seed Capital for Project Fund
+          .feature
+            p Acquisition Support
+            p Corporate Carve-out
+            p Management Buy-out
+            p Impact Growth Capital
+
+    //- container end ––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+    include footer.pug
+
+

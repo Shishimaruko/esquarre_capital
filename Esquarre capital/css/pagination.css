@@ -1,0 +1,42 @@
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+ul.page_number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  ul.page_number li {
+    width: 32px;
+    height: 32px;
+    margin-right: 32px; }
+    ul.page_number li a {
+      display: block;
+      height: 32px;
+      text-align: center;
+      font-family: 'Montserrat';
+      font-size: 20px;
+      line-height: 32px;
+      font-weight: 400;
+      color: #D1AF56; }
+    ul.page_number li img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
+    ul.page_number li .page_back {
+      background-color: #D1AF56;
+      opacity: 0.5; }
+    ul.page_number li .page_next {
+      border: 1px solid rgba(159, 159, 159, 0.5); }
+    ul.page_number li:first-of-type, ul.page_number li:nth-last-child(2) {
+      margin-right: 0; }
+
+/*# sourceMappingURL=pagination.css.map */

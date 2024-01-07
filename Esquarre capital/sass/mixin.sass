@@ -1,0 +1,86 @@
+@mixin bd($w:1px, $c:red)
+  border: $w solid $c
+
+@mixin center
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%,-50%)
+
+@mixin ani-time
+  transition: all 0.3s
+
+@mixin hover-button($w:50px,$h:50px)
+  display: block
+  background-size: contain
+  background-repeat: no-repeat
+  width: $w
+  height: $h
+  +ani-time
+
+@mixin mt($fz:24px,$lh:120%,$fw:400)
+  font-family: 'Montserrat'
+  font-size: $fz
+  line-height: $lh
+  font-weight: $fw
+
+@mixin rb($fz:17px,$lh:120%,$fw:400)
+  font-family: 'Roboto'
+  font-size: $fz
+  line-height: $lh
+  font-weight: $fw
+
+@mixin hv($fz:17px,$lh:120%,$fw:400)
+  font-family: 'Helvetica'
+  font-size: $fz
+  line-height: $lh
+  font-weight: $fw
+
+@mixin card_arrow
+  content: url(../img/global/arrow_left.png)
+  width: 36px
+  height: 36px
+  position: absolute
+  bottom: 5px
+  right: 5px
+  z-index: 2
+  transform: rotate(180deg)
+
+@mixin card_corner
+  content: ''
+  width: 0px
+  height: 0px
+  position: absolute
+  right: 0
+  bottom: 0
+  z-index: 1
+  border-top: 50px solid transparent
+  border-left: 50px solid transparent
+  border-bottom: 50px solid $gold
+  border-right: 50px solid $gold
+  border-bottom-right-radius: 8px
+
+@mixin top_line
+  content: ''
+  width: 15px
+  height: 2px
+  background-color: #A2C8CB
+  position: absolute
+  left: 0px
+  top: 0px
+
+// –––––––––––––––––––––––––––––––––––-
+
+$dark_1: #38383A
+$dark_2: #878787
+$dark_3: #9F9F9F
+$dark_4: #D9D9D9
+$dark_5: #D6D6D6
+$dark_6: #4F4F4F
+$dark_7: #58686C
+$blue: #99D6DB
+$blue_2: #A2C8CB
+$gold: #D1AF56
+$gold_2: #F8F6F1
+$line: #EEE7E7
+
